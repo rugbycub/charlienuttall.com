@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Charlie Nuttall | Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'> 
+  
+  <%= stylesheet_link_tag    "bootstrap.min.css", media: "screen" %>
+  <%= stylesheet_link_tag    "style.css", media: "screen" %>
+  <%= stylesheet_link_tag    "settings.css", media: "screen" %>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/fontello.css" />
+  <link rel="stylesheet" type="text/css" href="assets/icon-effect.css" />
+  <link rel="stylesheet" type="text/css" href="assets/prettyphoto.css" />
+  <link rel="stylesheet" type="text/css" href="assets/dzsportfolio.css" />
+  <%= javascript_include_tag 'modernizr.custom.js' %>
+  <%= csrf_meta_tag %>
+</head>
+
+
+<body>
+  <header class="header">
+    <!--logo-->
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="navbar">
+            <!--logo-->
+            <div class="logo">
+              <a href="/">
+                <%= image_tag("logo.png") %>
+              </a>
+            </div>
+            <!--menu-->
+            <a class="menu-link" href="#menu"><i class="icon-reorder white"></i></a>
+            <nav id="menu2" class="menu">
+              <ul>
+                <li class="has-submenu-no"><a href="/">Home</a></li>
+                <li class="has-submenu-no"><a href="about">About</a></li>
+                <li class="has-submenu-no"><a href="portfolio">Portfolio</a></li> 
+                <li class="has-submenu-no"><a href="blog">Blog</a></li>
+                <li class="has-submenu-no"><a href="contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--//header-->
+
+  <!-- sticky header-->
+  <header class="header sticky hidden-phone hidden-tablet">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div class="navbar">
+            <!--logo-->
+            <div class="logo-sticky">
+              <a href="/">
+                <%= image_tag("logo.png") %>
+              </a>
+            </div>
+            <!--menu-->
+            <a class="menu-link" href="#menu"><i class="icon-reorder white"></i></a>
+            <nav id="menu2" class="menu">
+              <ul>
+                <li class="has-submenu-no"><a href="/">Home</a></li>
+                <li class="has-submenu-no"><a href="about">About</a></li>
+                <li class="has-submenu-no"><a href="portfolio">Portfolio</a></li> 
+                <li class="has-submenu-no"><a href="blog">Blog</a></li>
+                <li class="has-submenu-no"><a href="contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- // header -->
+  
+<%= yield %>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span12 center">
+          <%= image_tag("logo.png") %>
+          <div class="copyright">
+            <p>
+              <a href="http://www.linkedin.com/in/charlienuttall"><i class="icon icon-linkedin marg-right5"></i></a>
+              <a href="https://twitter.com/cenuttall_sf"><i class="icon icon-twitter marg-right5"></i></a>
+              <a href="http://www.pinterest.com/charlienuttall/"><i class="icon icon-pinterest marg-right5"></i></a>
+              <a href="https://github.com/rugbycub"><i class="icon icon-github marg-right5"></i></a>
+            </p>
+            <p>
+              San Francisco, California
+              <span class="dark-grey">//</span>
+              +1 415 963 1246
+              <span class="dark-grey">//</span>
+              charlie@charlienuttall.com
+              <span class="dark-grey">//</span>
+              @cenuttall_sf
+
+            </p>
+          </div>
+          <div class="go-top">
+            <span class="dark-grey"><i class="icon icon-align-justify marg-right5"></i></span>
+            <a href="#"><i class="icon icon-chevron-sign-up"></i></a>
+            <span class="dark-grey"><i class="icon icon-align-justify marg-left5"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <%= javascript_include_tag "jquery.js" %>
+  <%= javascript_include_tag "bootstrap.min.js" %>
+  <%= javascript_include_tag "jquery.themepunch.revolution.min.js" %>
+  <%= javascript_include_tag "jquery.themepunch.plugins.min.js" %>
+  <!-- slider settings -->
+  <script>
+    //<![CDATA[
+    $(document).ready(function() {
+      if ($.fn.cssOriginal != undefined)
+        $.fn.css = $.fn.cssOriginal;
+      $('.fullwidthbanner').revolution({
+        delay: 9000,
+        startwidth: 950,
+        startheight: 550,
+        onHoverStop: "on",
+        navigationType: "none",
+        soloArrowLeftHOffset: 0,
+        soloArrowLeftVOffset: 0,
+        soloArrowRightHOffset: 0,
+        soloArrowRightVOffset: 0,
+        touchenabled: "on",
+        fullWidth: "on",
+        shadow: 0
+      });
+    });
+     //]]>
+  </script>
+ <%= javascript_include_tag "dzsportfolio.js" %>
+ <%= javascript_include_tag "jquery.isotope.min.js" %>
+ <%= javascript_include_tag "scroller.js" %>
+ <%= javascript_include_tag "prettyphoto.js" %>
+ <%= javascript_include_tag "scripts.js" %>
+  <!-- fade in settings -->
+  <script>
+    //<![CDATA[
+    $(window).scroll(function() {
+      $('.hi-icon').each(function() {
+        var imagePos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + 900) {
+          $(this).addClass("fadeIn2");
+        }
+      });
+    });
+     //]]>
+  </script>
+  <script>
+    //<![CDATA[
+    $(window).scroll(function() {
+      $('.line').each(function() {
+        var imagePos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + 900) {
+          $(this).addClass("fadeIn2");
+        }
+      });
+    });
+     //]]>
+  </script>
+<script>
+  //<![CDATA[
+  setTimeout(function(){
+  $('.progress .bar').each(function() {
+            var me = $(this);
+            var perc = me.attr("data-percentage");
+       var current_perc = 0;
+      var progress = setInterval(function() {
+                if (current_perc>=perc) {
+                    clearInterval(progress);
+                } else {
+                    current_perc +=1;
+                    me.css('width', (current_perc)+'%');
+                }
+        me.text((current_perc)+'%');
+      }, 20);
+    });
+  },300);
+  $('.bar-percentage[data-percentage]').each(function () {
+  var progress = $(this);
+  var percentage = Math.ceil($(this).attr('data-percentage'));
+  $({countNum: 0}).animate({countNum: percentage}, {
+    duration: 2000,
+    easing:'linear',
+    step: function() {
+      // What todo on every count
+      var pct = Math.floor(this.countNum) + '%';
+      progress.text(pct) && progress.siblings().children().css('width',pct);
+    }
+  });
+});
+//]]>
+</script> 
+<script type="text/javascript">
+  //<![CDATA[
+ 
+  var ready = function() {
+    $(document).ready(function(){ 
+      $("#ajax-contact-form").submit(function() {
+        console.log("form submit hit");
+        var str = $(this).serialize();
+        console.log(str);   
+        $.ajax({
+          type: "post",
+          url: '/create',
+          data: str}).done(function( response ) {alert('<%= escape_javascript(flash.now[:notice]) %>');
+  });
+            
+          },
+          "json"
+        )
+        return false;
+      });                             
+  };
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+  //]]>
+  </script>
+</body>
+
+</html>

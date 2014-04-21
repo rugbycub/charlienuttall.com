@@ -1,0 +1,14 @@
+    <%= form_for contact_path, method: :post,  remote: true, authenticity_token: true, html: {id: "ajax-contact-form"} do |f| %>
+        <%= f.label :name, class: "form_info" %>
+  <%= f.text_field :name, class: "span5" %>
+  <%= f.label :email, class: "form_info" %>
+  <%= f.text_field :email, class: "span5" %>
+  <%= f.label :subject, class: "form_info" %>
+  <%= f.text_field :subject, class: "span5" %>
+  <%= f.label :message, class: "form_info" %>
+  <%= f.text_area :message, class: "span8" %>
+ 
+
+  <%= f.submit :button, :value=>"submit" %>
+
+    <% end %>
