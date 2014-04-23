@@ -5,7 +5,7 @@ PortfolioSite::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'site#index'
   get '/about', to: 'site#about'
-  get '/portfolio', to: 'portfolio#index'
+  resources :portfolio
   resources :blog
   post '/contact', to: 'contact#create', as: 'create_contact'
   get '/contact', to: 'contact#index', as: 'contact'
