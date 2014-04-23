@@ -238,7 +238,7 @@ i.service-icon { margin: 5px auto 25px auto!important; text-align: center!import
     transition: all 0.3s ease-in;
 }
 .logo a:hover{ opacity: .80; }
-.header { margin-bottom: 35px; background-image: url("/assets/header.png");  }
+.header { margin-bottom: 35px; background-image: url("http://charlienuttall.blob.core.windows.net/images/header.png");  }
 
 /**** STICKY ****/
 .sticky{

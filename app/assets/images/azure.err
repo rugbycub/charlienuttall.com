@@ -1,0 +1,8 @@
+Tue Apr 22 2014 20:52:04 GMT-0700 (PDT):
+[Error: Local file slider/slider8.jpg doesn't exist]
+Error: Local file slider/slider8.jpg doesn't exist
+    at __$uploadAzureBlob (/usr/local/azure/lib/commands/storage.blob._js:620:26)
+    at ___ (/usr/local/azure/lib/commands/storage.blob._js:620:129)
+    at ___ (/usr/local/azure/node_modules/streamline/lib/callbacks/runtime.js:85:13)
+    at exports.fileExists (/usr/local/azure/lib/util/utils.js:746:37)
+    at Object.fs.exists [as oncomplete] (fs.js:91:19)

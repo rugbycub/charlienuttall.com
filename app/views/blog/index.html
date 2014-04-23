@@ -8,23 +8,18 @@
 		<div class="span9">
 			<div class="pad20"></div>
 		<!--post-->
-			<div class="hover_img">
-				<a href="img/blog/1a.jpg" data-rel="prettyPhoto"><img src="img/blog/1a.jpg" alt=""/></a>
-			</div>
-			<h4><i class="icon-picture red"></i> <b>30-08-13</b></h4>
-			<h1 class="blog"><a href="blog_post.html">See smoke or fire, or some such evidence</a></h1>
-			<p>Enim ultrices, elementum phasellus. Mauris sed nulla sed, egestas feugiat a dictum libero, nunc sapien tri tique facilisis venenatis risus, 
-			suspendisse ac nec et. Nulla sed mauris, congue duis proin nonummy adipiscing vitae  Mauris sed nulla sed, egestas feugiat a dictum libero, nunc sapien 
-			tristique facilisis venenatis risus. Enim ultrices, elementum phasellus.</p>
+			<% @blogs.each do |blog| %>
+			<h4><b><%= blog.created_at.to_date %></b></h4>
+			<h1 class="blog"><a href="blog/<%= blog.id %>"><%= blog.title %></a></h1>
+			<p><%= blog.text %></p>
 			<div class="post-meta muted">
 			<ul>
-				<li>Posted by <a href="#">admin</a> </li>
-				<li>in <a href="#">web</a>, <a href="#">graphics</a></li>
-				<li>tags <a href="#">prints</a>, <a href="#">design</a></li>
+				<li>Posted by Charlie</a> </li>
 			</ul>
 			</div>
-			<h4><a href="#"><b>READ &rarr;</b></a></h4>
+			<h4><a href="blog/<%= blog.id %>"><b>READ &rarr;</b></a></h4>
 			<!--end post-->
+			<% end %>
 			
 			<div class="pad30"></div>
 
@@ -36,10 +31,8 @@
 			
 			<!--sidebar-->
 			<div class="sidebar span3">
-			<h4>Text Widget</h4>
-			 Feugiat a dictum libero, nunc sapien tristique facilisis venenatis risus. Enim ultrices, elementum phasellus. Mauris sed nulla sed, egestas feugiat a dictum libero, 
-			nunc sapien tristique. Quisque ligulas ipsum, euismod atras vulputate iltricies etri elit.
-			
+			<h4>Hello!</h4>
+			 Welcome to my blog. Here I will be posting more about me, and my path to becoming a developer.
 			</div>
 				</div>
 					</div>

@@ -6,10 +6,10 @@ class ContactController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(contact_params)
-      if @contact.save
-        redirect_to '/contact', @saved = true
-      end
+    @contact = Contact.create(contact_params)
+    flash[:notice] = "Message successfully submitted. Thanks for contacting me."
+    render action: "index"
+ 
 
   end
   
